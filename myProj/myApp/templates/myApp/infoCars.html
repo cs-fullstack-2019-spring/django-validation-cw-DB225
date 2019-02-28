@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Request Method : {{ methodType }}
+
+{{everyError}}
+
+<h1>All Entries</h1>
+{% for eachEntry in allEntries %}
+{{ eachEntry.make }} {{ eachEntry.model }}
+{% if not forloop.last %}
+<br>
+{% endif %}
+{% endfor %}
+
+<h1>Complete Here</h1>
+<form action="{% url 'confirm' %}" method="post">
+    {% csrf_token %}
+    {{ myCar.as_p }}
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>
