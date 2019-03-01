@@ -4,3 +4,5 @@ Create a ModelForm for a new Car. Allow a user to sumbit the car's make, model, 
 - Miles per gallon less than 20. Say"That's less than a truck!!!"
 - Miles per gallon that's greater than 500. Say "That's impossible (in 2019)
 - Any year that's less than 2019. Say "That's not new!!!"
+<hr>
+1 point. It looks like most of it is there, but you're over writting the context near the bottom of your page that you use for your get requests.
